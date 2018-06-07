@@ -1,5 +1,3 @@
-require('dotenv').config({silent: true})
-
 import express from 'express'
 import cookie from 'cookie'
 import cookieParser from 'cookie-parser'
@@ -9,6 +7,10 @@ import bodyParser from 'body-parser'
 import { createServer } from 'http'
 
 import CMSAuth from  './githubCMSAuth'
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({silent: true})
+}
 
 const port = process.env.PORT || 3000
 
