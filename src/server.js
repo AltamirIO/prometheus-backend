@@ -7,6 +7,7 @@ import bodyParser from 'body-parser'
 import { createServer } from 'http'
 
 import CMSAuth from  './githubCMSAuth'
+import ContactHelper from './contacthelper'
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config({silent: true})
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 CMSAuth(app)
+ContactHelper(app)
 
 // Server any static files
 // app.use(express.static('public'))
