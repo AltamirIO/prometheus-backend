@@ -1,0 +1,38 @@
+{
+  "name": "prometheusconsulting-backend",
+  "version": "1.0.0",
+  "description": "Backend for the prometheus marketing site",
+  "main": "build/server.js",
+  "engines": {
+    "node": "^8.0.0"
+  },
+  "scripts": {
+    "test": "echo \"No Tests Specified\" && exit 1",
+    "serve": "nodemon ./src/server.js --exec babel-node -e js",
+    "prestart": "babel src -d dist -s",
+    "start": "node ./dist/index.js"
+  },
+  "author": "Michel Paupulaire",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cookie": "^0.3.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "4.16.3",
+    "randomstring": "1.1.5",
+    "simple-oauth2": "1.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "dotenv": "^6.0.0",
+    "flow-bin": "^0.73.0",
+    "nodemon": "^1.17.5"
+  }
+}
