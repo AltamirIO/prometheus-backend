@@ -9,8 +9,8 @@
   "scripts": {
     "test": "echo \"No Tests Specified\" && exit 1",
     "serve": "nodemon ./src/server.js --exec babel-node -e js",
-    "prestart": "babel src -d dist -s",
-    "start": "node ./dist/server.js"
+    "prestart": "babel src -d build -s",
+    "start": "node ./build/server.js"
   },
   "author": "Michel Paupulaire",
   "license": "ISC",
